@@ -2,29 +2,67 @@
 <html>
 
 <head>
+    <title>Discovering the world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Posts from around the world">
 </head>
 
 <body>
-    <div id="add">
-        <span>[Making your Life Easier]</span>
-        <span>Discovering the World</span>
+    <!--the title and sub-title area-->
+    <header>
+            <p>[Making your Life Easier]</p>
+            <h1><b>Discovering the World</b></h1>
+    </header>
+    
+    <!--the add new post button-->
+    <div>
+        <button onclick="alert('HI')">&#9998;</button>
     </div>
-    <div id="add">
-        <button></button>
+    
+    <!--filter buttons-->
+        <nav navbar>
+            <button name="All" value="All">All</button>
+            <button name="Travel" value="Travel">Travel</button>
+            <button name="Lifestyle" value="Lifestyle">Lifestyle</button>
+            <button name="Business" value="Business">Business</button>
+            <button name="Food" value="Food">Food</button>
+            <button name="Work" value="Work">Work</button>
+        </nav>
+    
+    <!--the posts that are being displayed-->
+    <div id="post">
+        <a href="#">
+            <img src="" width="400px" height="400px">
+        <h3>Come to our beaches</h3>
+        <label>Guy Joe</label>
+        <p>Never have you seen such beauty!</p>
+        <label>TRAVEL</label>
+        </a>
     </div>
-    <div id="filters">
-        <button></button>
-    </div>
-    <div id="posts"></div>
-    <div id="add_form">
-        <label>Title</label>
-        <label>Description</label>
-        <label>Type</label>
-        <select>
-            <option value="LIFESTYLE">LIFESTYLE</option>
-            <option value="TRAVEL">TRAVEL</option>
-        </select>
-        <label>Date</label>
+
+    <!--form for the popup to add a new post-->
+    <div>
+        <form action="" method="POST">
+            <label for="Title">Title</label>
+            <input name="Title" id="Title" type="text">
+            <label for="Description">Description</label>
+            <input name="Description" id="Description" type="text">
+            <label for="Category">Category</label>
+            <select name="Category" id="Category">
+                <option value="" disabled selected>choose one</option>
+                <option value="TRAVEL">TRAVEL</option>
+                <option value="LIFESTYLE">LIFESTYLE</option>
+                <option value="BUSINESS">BUSINESS</option>
+                <option value="FOOD">FOOD</option>
+                <option value="WORK">WORK</option>
+            </select>
+            <label>Url of the Image</label>
+            <input name="Image" id="Image" type="image">
+            <label for="Date">Date</label>
+            <input name="Date" id="Date" type="date">
+            <input type="submit">
+        </form>
     </div>
 </body>
 
