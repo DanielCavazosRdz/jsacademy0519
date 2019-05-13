@@ -1,13 +1,13 @@
-body{
-    position: relative;
-}
-
 header{
     text-align: center;
 }
 
 header p{
     color: orange;
+}
+
+.biggerBrackets{
+    font-size: 200%;
 }
 
 a{
@@ -19,9 +19,9 @@ img{
 }
 
 .imgBox{
-    z-index: -1;
-    height: 200px;
-    width: auto;
+    height: 315px;
+    width: 100%;
+    overflow: hidden;
 }
 
 #postArea{
@@ -30,12 +30,53 @@ img{
 
 .box{
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
+    left: 0;
+
 }
 
 .add{
     position: absolute;
     right: 20px;
     background: orangered;
-    border-radius: 35px;
+    border-radius: 50%;
+}
+
+.postButtons{
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+div#post:hover .postButtons{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px){
+    div#post h3{
+        font-size: 100%;
+    } 
+    
+    div#post p, div#post label{
+        font-size: 80%;
+    }
+    button{
+        font-size: 20%;
+    }
+    .imgBox{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    div#post h3{
+        font-size: 75%;
+    } 
+    div#post p, div#post label{
+        font-size: 55%;
+    }
 }

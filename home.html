@@ -6,25 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Posts from around the world">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <div class="container">
         <!--the title and sub-title area-->
         <header class="row">
-            <p class="col-12">[Making your Life Easier]</p>
+            <p class="col-12"><span class="biggerBrackets">[</span>Making your Life Easier<span class="biggerBrackets">]</span></p>
             <h1 class="col-12">Discovering the World</h1>
 
             <!--the add new post button-->
-            <div class="d-flex flex-row-reverse">
-                <button type="button" class="btn add" data-toggle="modal" data-target="#addPost">&#9998;</button>
-            </div>
+            <button type="button" class="btn add" data-toggle="modal" data-target="#addPost">&#128393;</button>
         
         <!--filter buttons-->
             <div class="col-12 bg-light">
-                <nav class="navbar navbar-default">
+                <nav class="navbar navbar-default p-0">
                     <button name="All" class="col-2 btn btn-light active" value="All">All</button>
                     <button name="Travel" class="col-2 btn btn-light" value="Travel">Travel</button>
                     <button name="Lifestyle" class="col-2 btn btn-light" value="Lifestyle">Lifestyle</button>
@@ -39,77 +37,117 @@
         
         <!--the posts that are being displayed-->
         <div id="postArea" class="row">
-            <div class="row" id="post">
-                <a class="col-6 text-white" href="#">
-                    <img class="imgBox" src="Experiences_Beach.jpg">
-                    <div class="box">    
-                        <h3>Come to our beaches</h3>
-                        <label>Guy Joe</label>
-                        <p>Never have you seen such beauty!</p>
-                        <label>TRAVEL</label>
+            <div class="card col-sm-12 col-md-6 p-0" id="post">
+                <div class="card-body p-0">
+                    <a class="mx-auto text-white" href="#">
+                        <img class="imgBox" src="Experiences_Beach.jpg">
+                        <div class="box">    
+                            <h3>Come to our beaches</h3>
+                            <label>Guy Joe</label>
+                            <p>Never have you seen such beauty!</p>
+                            <label>TRAVEL</label>
+                        </div>
+                    </a>
+                    <div class="postButtons">
+                        <button class="btn btn-light">Edit</button>
+                        <button class="btn btn-light">Delete</button>
                     </div>
-                </a>
-        </div>
-        <div class="row" id="post">
-                <a class="col-6 text-white" href="#">
-                    <img class="imgBox" src="Experiences_Beach.jpg">
-                    <div class="box">    
-                        <h3>Come to our beaches</h3>
-                        <label>Guy Joe</label>
-                        <p>Never have you seen such beauty!</p>
-                        <label>TRAVEL</label>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 p-0" id="post">
+                <div class="card-body p-0">
+                    <a class="text-white" href="#">
+                        <img class="imgBox" src="forest.jpg">
+                        <div class="box">    
+                            <h3>Come to our beaches</h3>
+                            <label>Guy Joe</label>
+                            <p>Never have you seen such beauty!</p>
+                            <label>TRAVEL</label>
+                        </div>
+                    </a>
+                    <div class="postButtons">
+                        <button class="btn btn-light">Edit</button>
+                        <button class="btn btn-light">Delete</button>
                     </div>
-                </a>
-        </div>
-        <div class="row" id="post">
-                <a class="col-6 text-white" href="#">
-                    <img class="imgBox" src="Experiences_Beach.jpg">
-                    <div class="box">    
-                        <h3>Come to our beaches</h3>
-                        <label>Guy Joe</label>
-                        <p>Never have you seen such beauty!</p>
-                        <label>TRAVEL</label>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 p-0" id="post">
+                <div class="card-body p-0">
+                    <a class="text-white" href="#">
+                        <img class="imgBox" src="chapultepec.jpg">
+                        <div class="box">    
+                            <h3>Come to our beaches</h3>
+                            <label>Guy Joe</label>
+                            <p>Never have you seen such beauty!</p>
+                            <label>TRAVEL</label>
+                        </div>
+                    </a>
+                    <div class="postButtons">
+                        <button class="btn btn-light">Edit</button>
+                        <button class="btn btn-light">Delete</button>
                     </div>
-                </a>
-        </div>
-        <div class="row" id="post">
-                <a class="col-6 text-white" href="#">
-                    <img class="imgBox" src="Experiences_Beach.jpg">
-                    <div class="box">    
-                        <h3>Come to our beaches</h3>
-                        <label>Guy Joe</label>
-                        <p>Never have you seen such beauty!</p>
-                        <label>TRAVEL</label>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 p-0" id="post">
+                <div class="card-body p-0">
+                    <a class="text-white" href="#">
+                        <img class="imgBox" src="london-eye.jpg">
+                        <div class="box">    
+                            <h3>Come to our beaches</h3>
+                            <label>Guy Joe</label>
+                            <p>Never have you seen such beauty!</p>
+                            <label>TRAVEL</label>
+                        </div>
+                    </a>
+                    <div class="postButtons">
+                        <button class="btn btn-light">Edit</button>
+                        <button class="btn btn-light">Delete</button>
                     </div>
-                </a>
+                </div>
+            </div>
         </div>
         <!--form for the popup to add a new post-->
         <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="addPostLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
-
+                        <p class="modal-title">Add new Post</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <form action="" method="POST">
-                        <label for="Title">Title</label>
-                        <input name="Title" id="Title" type="text">
-                        <label for="Description">Description</label>
-                        <input name="Description" id="Description" type="text">
-                        <label for="Category">Category</label>
-                        <select name="Category" id="Category">
-                            <option value="" disabled selected>choose one</option>
-                            <option value="TRAVEL">TRAVEL</option>
-                            <option value="LIFESTYLE">LIFESTYLE</option>
-                            <option value="BUSINESS">BUSINESS</option>
-                            <option value="FOOD">FOOD</option>
-                            <option value="WORK">WORK</option>
-                        </select>
-                        <label>Url of the Image</label>
-                        <input name="Image" id="Image" type="image">
-                        <label for="Date">Date</label>
-                        <input name="Date" id="Date" type="date">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                        <input type="submit">
+                        <div class="form-group">
+                            <label for="Title">Title</label>
+                            <input name="Title" id="Title" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="Description">Description</label>
+                            <input name="Description" id="Description" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="Category">Category</label>
+                            <select name="Category" id="Category">
+                                <option value="" disabled selected>choose one</option>
+                                <option value="TRAVEL">TRAVEL</option>
+                                <option value="LIFESTYLE">LIFESTYLE</option>
+                                <option value="BUSINESS">BUSINESS</option>
+                                <option value="FOOD">FOOD</option>
+                                <option value="WORK">WORK</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input name="Image" id="Image" type="file" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="Date">Date</label>
+                            <input name="Date" id="Date" type="date">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                            <input type="submit">
+                        </div>
                     </form>
                 </div>
             </div>
