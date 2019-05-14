@@ -11,35 +11,36 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <!--the title and sub-title area-->
         <header class="row">
             <p class="col-12"><span class="biggerBrackets">[</span>Making your Life Easier<span class="biggerBrackets">]</span></p>
             <h1 class="col-12">Discovering the World</h1>
 
             <!--the add new post button-->
-            <button type="button" class="btn add" data-toggle="modal" data-target="#addPost">&#128393;</button>
-        
+            <div class="offset-sm-9 col-sm-3 offset-md-11 col-md-1">
+                <button type="button" class="btn btn-danger add text-white" data-toggle="modal" data-target="#addPost">&#128393;</button>
+            </div>
         <!--filter buttons-->
-            <div class="col-12 bg-light">
-                <nav class="navbar navbar-default p-0">
-                    <button name="All" class="col-2 btn btn-light active" value="All">All</button>
-                    <button name="Travel" class="col-2 btn btn-light" value="Travel">Travel</button>
-                    <button name="Lifestyle" class="col-2 btn btn-light" value="Lifestyle">Lifestyle</button>
-                    <button name="Business" class="col-2 btn btn-light" value="Business">Business</button>
-                    <button name="Food" class="col-2 btn btn-light"  value="Food">Food</button>
-                    <button name="Work" class="col-2 btn btn-light" value="Work">Work</button>
-                </nav>
+            <div class="col-md-12 bg-light">
+                <div class="btn-group p-0" role="group" aria-label="filter buttons">
+                    <button name="All" class="btn btn-outline-secondary active" value="All">All</button>
+                    <button name="Travel" class="btn btn-outline-secondary" value="Travel">Travel</button>
+                    <button name="Lifestyle" class="btn btn-outline-secondary" value="Lifestyle">Lifestyle</button>
+                    <button name="Business" class="btn btn-outline-secondary" value="Business">Business</button>
+                    <button name="Food" class="btn btn-outline-secondary"  value="Food">Food</button>
+                    <button name="Work" class="btn btn-outline-secondary" value="Work">Work</button>
+                </div>
             </div>
         </header>
         
         
         
         <!--the posts that are being displayed-->
-        <div id="postArea" class="row">
-            <div class="card col-sm-12 col-md-6 p-0" id="post">
+        <div id="postArea bg-transparent" class="row">
+            <div class="card col-sm-12 col-md-6 p-0 border-0 post" id="post">
                 <div class="card-body p-0">
-                    <a class="mx-auto text-white" href="#">
+                    <a class="text-white" href="#">
                         <img class="imgBox" src="Experiences_Beach.jpg">
                         <div class="box">    
                             <h3>Come to our beaches</h3>
@@ -53,8 +54,9 @@
                         <button class="btn btn-light">Delete</button>
                     </div>
                 </div>
+                <div class="overlay"></div>
             </div>
-            <div class="card col-sm-12 col-md-6 p-0" id="post">
+            <div class="card col-sm-12 col-md-6 p-0 border-0 post" id="post">
                 <div class="card-body p-0">
                     <a class="text-white" href="#">
                         <img class="imgBox" src="forest.jpg">
@@ -70,8 +72,9 @@
                         <button class="btn btn-light">Delete</button>
                     </div>
                 </div>
+                <div class="overlay"></div>
             </div>
-            <div class="card col-sm-12 col-md-6 p-0" id="post">
+            <div class="card col-sm-12 col-md-6 p-0 border-0 post" id="post">
                 <div class="card-body p-0">
                     <a class="text-white" href="#">
                         <img class="imgBox" src="chapultepec.jpg">
@@ -87,8 +90,9 @@
                         <button class="btn btn-light">Delete</button>
                     </div>
                 </div>
+                <div class="overlay"></div>
             </div>
-            <div class="card col-sm-12 col-md-6 p-0" id="post">
+            <div class="card col-sm-12 col-md-6 p-0 border-0 post" id="post">
                 <div class="card-body p-0">
                     <a class="text-white" href="#">
                         <img class="imgBox" src="london-eye.jpg">
@@ -104,11 +108,12 @@
                         <button class="btn btn-light">Delete</button>
                     </div>
                 </div>
+                <div class="overlay"></div>
             </div>
         </div>
         <!--form for the popup to add a new post-->
         <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="addPostLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <p class="modal-title">Add new Post</p>
@@ -146,7 +151,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-                            <input type="submit">
+                            <input type="submit" class="btn btn-primary">
                         </div>
                     </form>
                 </div>

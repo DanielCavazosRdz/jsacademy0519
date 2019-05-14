@@ -10,16 +10,12 @@ header p{
     font-size: 200%;
 }
 
-a{
-    color: white;
-}
-
 img{
     filter: brightness(65%);
 }
 
 .imgBox{
-    height: 315px;
+    height: 450px;
     width: 100%;
     overflow: hidden;
 }
@@ -30,14 +26,11 @@ img{
 
 .box{
     position: absolute;
-    bottom: 10%;
-    left: 0;
-
+    bottom: 20%;
+    left: 5%;
 }
 
 .add{
-    position: absolute;
-    right: 20px;
     background: orangered;
     border-radius: 50%;
 }
@@ -51,17 +44,31 @@ img{
     transition: opacity .2s, visibility .2s;
 }
 
+.post:hover > .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color: black;
+    opacity:0.1;
+}
+
 div#post:hover .postButtons{
     visibility: visible;
     opacity: 1;
 }
 
+@media only screen and (max-width: 1200px){
+    .imgBox{
+        height: 350px;
+    }
+}
+
 @media only screen and (max-width: 768px){
-    div#post h3{
-        font-size: 100%;
+    .post h3{
+        font-size: 120%;
     } 
     
-    div#post p, div#post label{
+    .post p, div#post label{
         font-size: 80%;
     }
     button{
@@ -70,13 +77,20 @@ div#post:hover .postButtons{
     .imgBox{
         height: 100%;
     }
+    .box{
+        bottom: 20%;
+    }
 }
 
 @media only screen and (max-width: 375px){
-    div#post h3{
-        font-size: 75%;
+    .post h3{
+        font-size: 80%;
     } 
-    div#post p, div#post label{
+    .post p, div#post label{
         font-size: 55%;
+    }
+    .box{
+        bottom: 0;
+        left: 5%;
     }
 }
